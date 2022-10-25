@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  form.form-container(method="POST" action="/new")
+    label(for="author-name") Author's name
+    input#author-name(type='text' name="authorName" placeholder="John Smith")
+    br
+    br
+    label(for="message-text") Text message
+    textarea#message-text(name="messageText" placeholder="Write your message here...")
+    br
+    button.submit-btn Submit
